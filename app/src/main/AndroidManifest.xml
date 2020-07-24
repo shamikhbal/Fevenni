@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.pickuplaundry">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/felv_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/felv_logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".ForgotPassword"></activity>
+        <activity android:name=".RunnerProfile" />
+        <activity android:name=".EditProfile" />
+        <activity android:name=".UserProfile" />
+        <activity android:name=".RunnerOrderHistory" />
+        <activity android:name=".RunnerOrderRV" />
+        <activity android:name=".Receipt" />
+        <activity android:name=".TrackUser" />
+        <activity android:name=".OrderHistory" />
+        <activity android:name=".TrackRunner" />
+        <activity android:name=".ComfirmOrder" />
+        <activity android:name=".SetupItem" />
+        <activity android:name=".Home" />
+        <activity android:name=".Signup" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home"
+    android:fitsSystemWindows="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Home">
+
+        <RadioGroup
+            android:id="@+id/radiogroup"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5"
+            app:layout_constraintVertical_bias="0.0">
+
+            <RadioButton
+                android:id="@+id/KPZ_id"
+                android:layout_width="202dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:checked="false"
+                android:onClick="checkButton"
+                android:text="Kolej Pendeta Zaba (KPZ)" />
+
+            <TextView
+                android:id="@+id/rider"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_marginStart="40dp"
+                android:layout_weight="1"
+                android:text="Wash:RM5.00   DryRM5.00" />
+
+            <RadioButton
+                android:id="@+id/KBH_id"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:checked="false"
+                android:onClick="checkButton"
+                android:text="Kolej BurhanuddinHelmi (KBH)" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_marginStart="40dp"
+                android:layout_weight="1"
+                android:text="Wash:RM4.00    Dry:RM4.00" />
+
+            <RadioButton
+                android:id="@+id/KIZ_id"
+                android:layout_width="215dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:checked="false"
+                android:onClick="checkButton"
+                android:text="Kolej Ibu Zain (KIZ)" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_marginStart="40dp"
+                android:layout_weight="1"
+                android:text="Wash:RM2.50    Dry:RM2.50" />
+
+            <RadioButton
+                android:id="@+id/KDO_id"
+                android:layout_width="215dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:checked="false"
+                android:onClick="checkButton"
+                android:text="Kolej Dato Onn (KDO)" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_marginStart="40dp"
+                android:layout_weight="1"
+                android:text="Wash:RM5.00    Dry:RM5.00" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="19dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:text="Pickup Date"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radiogroup"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/pickup_location"
+            android:layout_width="255dp"
+            android:layout_height="39dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="36dp"
+            android:ems="10"
+            android:hint="Ex : KPZ A2114"
+            android:inputType="textPersonName"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pDate" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Delivery Date"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pickup_location"
+            app:layout_constraintVertical_bias="0.047" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:text="Location :"
+            app:layout_constraintEnd_toStartOf="@+id/delivery_location"
+            app:layout_constraintHorizontal_bias="0.085"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dDate" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:text="Delivery Time"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.727"
+            app:layout_constraintStart_toEndOf="@+id/textView2"
+            app:layout_constraintTop_toBottomOf="@+id/pickup_location" />
+
+        <EditText
+            android:id="@+id/delivery_location"
+            android:layout_width="250dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="36dp"
+            android:ems="10"
+            android:hint="Ex : KPZ A2114"
+            android:inputType="textPersonName"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dDate" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="8dp"
+            android:text="Location :"
+            app:layout_constraintEnd_toStartOf="@+id/pickup_location"
+            app:layout_constraintHorizontal_bias="0.095"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pDate" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp"
+            android:text="Please choose college laundry "
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.587"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.050000012" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:text="Pickup Time"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.705"
+            app:layout_constraintStart_toEndOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/radiogroup" />
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorButton"
+            android:text="Next"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="97dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.968"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/kpz" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="115dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            app:layout_constraintVertical_bias="0.003"
+            app:srcCompat="@drawable/kbh" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="106dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.996"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/kiz" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="85dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.96"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView3"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/kdo" />
+
+        <TextView
+            android:id="@+id/pDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:clickable="true"
+            android:text="Set Pickup Date"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.045"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <TextView
+            android:id="@+id/pTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Set Pickup Time"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.605"
+            app:layout_constraintStart_toEndOf="@+id/pDate"
+            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+        <TextView
+            android:id="@+id/dDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Set Delivery Date"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.045"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <TextView
+            android:id="@+id/dTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Set Delivery Time"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.661"
+            app:layout_constraintStart_toEndOf="@+id/dDate"
+            app:layout_constraintTop_toBottomOf="@+id/textView9" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <include
+            layout="@layout/toolbar_layout"/>
+    </LinearLayout>
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/navigationView"
+        android:layout_gravity="start"
+        app:menu="@menu/drawer_menu"
+        app:headerLayout="@layout/header_layout"/>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
